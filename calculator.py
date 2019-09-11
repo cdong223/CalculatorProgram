@@ -20,12 +20,15 @@ def cholesterol_interface():
     print("Cholesterol check")
     chol_input = input("Enter your cholesterol test result: ")
     chol_data = chol_input.split("=")
-    if chol_data[0] == "HDL":
-        result = check_HDL(int(chol_data[1]))
-        print("The result is {}".format(result))
-    elif chol_data[0] == "LDL":
-        result = check_LDL(int(chol_data[1]))
-        print("The result is {}".format(result))
+    if chol_data[0] in ["HDL","LDL"]:
+        if chol_data[0] == "HDL":
+            result = check_HDL(int(chol_data[1]))
+            print("The result is {}".format(result))
+        elif chol_data[0] == "LDL":
+            result = check_LDL(int(chol_data[1]))
+            print("The result is {}".format(result))
+    else:
+        print("bad input")
 
 def interface():
         print("My calculator program")

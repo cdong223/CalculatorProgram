@@ -8,7 +8,7 @@ def my_function(x):
 if __name__ == "__main__":
     i = -20
     answer = my_function(i)
-    if answer == None:
+    if answer is None:
         print("It returned nothing")
     else:
         print(answer)
